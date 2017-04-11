@@ -20,4 +20,14 @@ public class Photographer {
     cameraList.remove(camera);
   }
 
+  public String printCameraList() {
+
+    String cameras = "";
+
+    for(Printable camera : this.cameraList) {
+      cameras += camera.printDetails();
+    } 
+    return cameras;
+  }
+
 }

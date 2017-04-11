@@ -1,13 +1,13 @@
 public class Camera implements Printable {
 
-private String name;
+private String details;
 
-public Camera(String name) {
-  this.name = name;
+public Camera(String details) {
+  this.details = details;
 }
 
 public String printDetails() {
-  return this.name;
+  return this.details;
 }
 
 }

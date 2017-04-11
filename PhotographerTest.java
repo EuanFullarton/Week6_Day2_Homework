@@ -5,11 +5,16 @@ public class PhotographerTest {
 
   Photographer photographer;
   Camera camera;
+  DigitalCamera digitalCamera;
+  AnalogCamera analogCamera;
+  Printable printable;
 
   @Before
   public void before() {
     photographer = new Photographer();
-    camera = new Camera("Nikon");
+    digitalCamera = new DigitalCamera("Panasonic, £175");
+    analogCamera = new AnalogCamera("Sony, £150");
+
   }
 
   @Test
@@ -19,21 +24,28 @@ public class PhotographerTest {
 
   @Test
   public void canAddCamera() {
-    photographer.addCamera(camera);
+    photographer.addCamera(printable);
     assertEquals(1, photographer.cameraCount());
   }
 
   @Test
   public void canRemoveCamera() {
-    photographer.addCamera(camera);
-    photographer.addCamera(camera);
-    photographer.removeCamera(camera);
+    photographer.addCamera(digitalCamera);
+    photographer.addCamera(analogCamera);
+    photographer.removeCamera(analogCamera);
     assertEquals(1, photographer.cameraCount());
   }
 
   @Test
   public void cameraCanPrintDetails() {
-    assertEquals("Nikon", camera.printDetails());
+    assertEquals("Panasonic, £175", digitalCamera.printDetails());
+  }
+
+  @Test
+  public void photographerCanPrintDetailsOfAllCamerasOwned() {
+    photographer.addCamera(digitalCamera);
+    photographer.addCamera(analogCamera);
+    assertEquals("Panasonic, £175Sony, £150", photographer.printCameraList());
   }
 
 
