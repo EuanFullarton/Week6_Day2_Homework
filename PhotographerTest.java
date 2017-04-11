@@ -4,7 +4,6 @@ import org.junit.*;
 public class PhotographerTest {
 
   Photographer photographer;
-  Camera camera;
   DigitalCamera digitalCamera;
   AnalogCamera analogCamera;
   Printable printable;
