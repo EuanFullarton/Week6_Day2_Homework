@@ -34,7 +34,7 @@ public class PhotographerTest {
   @Test
   public void cameraCanPrintDetails() {
     camera.printDetails(camera);
-    assertEquals(("Nikon", 250), camera.printDetails("Nikon"));
+    assertEquals("Nikon", camera.printDetails("Nikon"));
   }
 
 
