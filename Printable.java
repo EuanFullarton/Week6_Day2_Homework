@@ -1,1 +1,5 @@
-import java.util *
+import java.util.*;
+
+public interface Printable {
+  
+}

@@ -10,7 +10,11 @@ public class PhotographerTest {
   public void before() {
     photographer = new Photographer();
     camera = new Camera();
+  }
 
+  @Test
+  public void camerasStartsEmpty() {
+    assertEquals(0, photographer.cameraCount());
   }
 
 
