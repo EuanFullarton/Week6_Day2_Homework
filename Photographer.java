@@ -16,4 +16,8 @@ public class Photographer {
     cameraList.add(camera);
   }
 
+  public void removeCamera(Printable camera) {
+    cameraList.remove(camera);
+  }
+
 }
