@@ -9,7 +9,7 @@ public class PhotographerTest {
   @Before
   public void before() {
     photographer = new Photographer();
-    camera = new Camera();
+    camera = new Camera("Nikon");
   }
 
   @Test
@@ -33,8 +33,7 @@ public class PhotographerTest {
 
   @Test
   public void cameraCanPrintDetails() {
-    camera.printDetails(camera);
-    assertEquals("Nikon", camera.printDetails("Nikon"));
+    assertEquals("Nikon", camera.printDetails());
   }
 
 
