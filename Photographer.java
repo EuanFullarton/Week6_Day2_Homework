@@ -12,4 +12,8 @@ public class Photographer {
     return cameraList.size();
   }
 
+  public void addCamera(Printable camera) {
+    cameraList.add(camera);
+  }
+
 }

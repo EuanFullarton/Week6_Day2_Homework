@@ -1,3 +1,3 @@
-public class Camera {
-  
+public class Camera implements Printable {
+
 }
