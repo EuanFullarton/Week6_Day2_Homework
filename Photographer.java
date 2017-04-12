@@ -36,7 +36,7 @@ public class Photographer {
     journal.put(day, numberOfPhotos);
   }
 
-  public Integer numberOfPhotos(String day) {
+  public int numberOfPhotos(String day) {
     return journal.get(day);
   }
   

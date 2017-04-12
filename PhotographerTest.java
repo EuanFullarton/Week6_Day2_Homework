@@ -43,7 +43,7 @@ public class PhotographerTest {
   @Test
   public void photographerCanAddToJournal() {
     photographer.addToJournal("Monday", 54);
-    assertEquals((Integer) 54, photographer.numberOfPhotos("Monday"));
+    assertEquals(54, photographer.numberOfPhotos("Monday"));
   }
 
 
