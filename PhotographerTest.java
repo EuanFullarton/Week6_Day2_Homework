@@ -13,15 +13,6 @@ public class PhotographerTest {
     photographer = new Photographer();
     digitalCamera = new DigitalCamera("Panasonic, £175");
     analogCamera = new AnalogCamera("Sony, £150");
-    HashMap<String, Integer> journal = new HashMap<String, Integer>();
-
-    journal.put("Monday", 1);
-    journal.put("Tuesday", 1);
-    journal.put("Wednesday", 1);
-    journal.put("Thursday", 1);
-    journal.put("Friday", 1);
-    journal.put("Saturday", 1);
-    journal.put("Sunday", 1);
 
   }
 
@@ -50,10 +41,9 @@ public class PhotographerTest {
   }
 
   @Test
-  public void photographerCanPrintDetailsOfAllCamerasOwned() {
-    photographer.addCamera(digitalCamera);
-    photographer.addCamera(analogCamera);
-    assertEquals("Panasonic, £175Sony, £150", photographer.printCameraList());
+  public void photographerCanAddToJournal() {
+    photographer.addToJournal("Monday", 54);
+    assertEquals((Integer) 54, photographer.numberOfPhotos("Monday"));
   }
 
 

@@ -3,7 +3,7 @@ import java.util.*;
 public class Photographer {
 
   private ArrayList<Printable> cameraList;
-  private HashMap journal;
+  private HashMap<String, Integer> journal;
 
   public Photographer() {
     this.cameraList = new ArrayList<Printable>();
@@ -32,14 +32,12 @@ public class Photographer {
     return cameras;
   }
 
-  public int numberOfPhotos() {
+  public void addToJournal(String day, Integer numberOfPhotos) {
+    journal.put(day, numberOfPhotos);
+  }
 
-    int number = 0;
-
-    for(Hashmap photos : this.journal) {
-      number += photos.values();
-    } 
-    return number;
+  public Integer numberOfPhotos(String day) {
+    return journal.get(day);
   }
   
     
